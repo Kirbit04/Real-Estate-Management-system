@@ -95,3 +95,55 @@ INSERT INTO payment (Payment_id, Payment_date, Amount_paid, Payment_method, Leas
 (8, '2024-08-15', 75000.00, 'Cheque', 8),
 (9, '2024-09-12', 120000.00, 'Bank Transfer', 9),
 (10, '2024-10-01', 65000.00, 'Mobile Payment', 10);
+
+-- To add data to the client_interactions table
+INSERT INTO client_interactions (Client_id, Interaction_date, Interaction_type, Notes) VALUES
+(1, '2024-01-15 09:00:00', 'Email', 'Discussed property availability and pricing.'),
+(2, '2024-02-20 14:30:00', 'Call', 'Follow-up on maintenance request.'),
+(3, '2024-03-10 11:00:00', 'Meeting', 'Client meeting to sign lease agreement.'),
+(4, '2024-04-01 16:00:00', 'Email', 'Sent reminder for upcoming payment.'),
+(5, '2024-05-05 10:30:00', 'Call', 'Discussed lease renewal options.'),
+(6, '2024-06-10 13:00:00', 'Email', 'Informed client about maintenance schedule.'),
+(7, '2024-07-15 15:30:00', 'Meeting', 'Inspection of the property with the client.'),
+(8, '2024-08-01 09:30:00', 'Email', 'Updated client on payment confirmation.'),
+(9, '2024-09-10 10:00:00', 'Call', 'Client inquiry about property details.'),
+(10, '2024-10-05 14:00:00', 'Meeting', 'Final walkthrough before move-in.');
+
+-- To add data to the transactions table
+INSERT INTO transactions (Property_id, Client_id, Agent_id, Transaction_date, Amount, Status) VALUES
+(101, 1, 1, '2024-01-10', 50000.00, 'Completed'),
+(102, 2, 2, '2024-02-18', 70000.00, 'Completed'),
+(103, 3, 3, '2024-03-05', 45000.00, 'Pending'),
+(104, 4, 4, '2024-04-10', 60000.00, 'Completed'),
+(105, 5, 5, '2024-05-15', 85000.00, 'Pending'),
+(106, 6, 6, '2024-06-20', 30000.00, 'Completed'),
+(107, 7, 7, '2024-07-05', 45000.00, 'Pending'),
+(108, 8, 8, '2024-08-15', 75000.00, 'Completed'),
+(109, 9, 9, '2024-09-12', 120000.00, 'Pending'),
+(110, 10, 10, '2024-10-01', 65000.00, 'Completed');
+
+-- To add data to the automated_communications table
+INSERT INTO automated_communications (Client_id, Communication_date, Message, Status) VALUES
+(1, '2024-01-01 08:00:00', 'Reminder: Your lease starts today!', 'Sent'),
+(2, '2024-02-10 10:00:00', 'Notification: Upcoming payment due in 5 days.', 'Sent'),
+(3, '2024-03-15 09:00:00', 'Alert: Maintenance request received and scheduled.', 'Sent'),
+(4, '2024-04-05 15:00:00', 'Reminder: Lease renewal options available.', 'Pending'),
+(5, '2024-05-01 11:00:00', 'Update: Your payment has been confirmed.', 'Sent'),
+(6, '2024-06-15 14:00:00', 'Notification: Maintenance request completed.', 'Sent'),
+(7, '2024-07-10 16:00:00', 'Alert: Overdue payment reminder.', 'Pending'),
+(8, '2024-08-01 08:30:00', 'Update: Property inspection report available.', 'Sent'),
+(9, '2024-09-05 09:15:00', 'Notification: Lease end approaching, renew now!', 'Pending'),
+(10, '2024-10-01 10:00:00', 'Reminder: Final move-in checklist.', 'Sent');
+
+-- To add data to the security_audit table
+INSERT INTO security_audit (Timestamp, User_id, Action, Details) VALUES
+('2024-01-01 10:00:00', 1, 'Login', 'User logged in successfully.'),
+('2024-01-05 14:30:00', 2, 'Data Update', 'Updated property details for Property_id 102.'),
+('2024-02-10 09:00:00', 3, 'Password Change', 'User changed password.'),
+('2024-03-15 11:00:00', 4, 'Failed Login', 'Failed login attempt.'),
+('2024-04-20 12:00:00', 5, 'Data Deletion', 'Deleted tenant record for Tenant_id 5.'),
+('2024-05-25 08:30:00', 6, 'Login', 'User logged in successfully.'),
+('2024-06-10 16:00:00', 7, 'Data Update', 'Updated lease details for Lease_id 7.'),
+('2024-07-05 13:45:00', 8, 'Failed Login', 'Failed login attempt.'),
+('2024-08-01 14:00:00', 9, 'Password Change', 'User changed password.'),
+('2024-09-15 09:30:00', 10, 'Login', 'User logged in successfully.');
